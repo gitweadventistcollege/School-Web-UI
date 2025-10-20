@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Updates</title>
+  <link rel="icon" href="image/log.jpg" type="image/x-icon">
+
+  <!-- Swiper & FontAwesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="load.css">
+  <link rel="stylesheet" href="css/updates.css">
+</head>
+
+<body>
+ <!-- Loading Screen -->
+ <div id="loading-screen">
+  <div class="water-drop">
+    <div class="drop"></div>
+    <div class="ripple"></div>
+  </div>
+  <p class="loading-text">Loading...</p>
+  <p class="loading-subtext">Produced by C Codes</p>
+</div>
+
+<!-- Header -->
+<header id="mainHeader">
+  <div class="logo">
+    <img src="image/log.jpg" alt="School Logo" />
+    <h1>College Adventiste de Gitwe</h1>
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="academics.html">Academics</a>
+    <div class="dropdown" id="ourSchoolDropdown">
+      <button onclick="toggleDropdown()">Our School</button>
+      <div class="dropdown-content" id="dropdownMenu">
+        <a href="about.html">About Us</a>
+        <a href="alumni.html">Alumni</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+    </div>
+    <a href="extracurricular.html">Extracurricular</a>
+    <a href="updates.html">School Updates</a>
+    <a href="apply.html" class="apply-btn">Apply Online</a>
+  </nav>
+</header>
+
+  <!-- Content Wrapper -->
+  <div class="container updates-wrapper">
+    <!-- Latest News Column -->
+    <div class="news-column">
+      <div class="page-title">
+        <h1>LATEST NEWS AND UPDATES</h1>
+      </div>
+      <section class="news-section" id="newsList">
+      </section>
+    </div>
+
+    <!-- Holiday Packages Column -->
+    <div class="holiday-column">
+      <button id="holidayBtn">📦 Show Holiday Packages</button>
+      <section class="holiday-section" id="holidaySection">
+        <h1>Holiday Packages</h1>
+        <div id="holidayList"><!-- Dynamic Holidays Will Load Here --></div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>SINCE 1931</h3>
+        <p><strong>COLLEGE ADVENTISTE de GITWE</strong></p>
+        <p>Gitwe Hill, Ruhango</p>
+        <p>PO Box 85, Muhanga, Rwanda</p>
+      </div>
+      <div class="footer-column">
+        <h4>INQUIRIES</h4>
+        <p><strong>Admissions:</strong> admissions@auca.ac.rw<br>📞 +250 7800000000</p>
+        <p><strong>Media:</strong> gitweadventistcollege@gmail.com</p>
+        <p><strong>General:</strong> info@gitwe.ac.rw</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <h4>Follow Us</h4>
+        <p>🌐 Facebook | Twitter | YouTube</p>
+      </div>
+    </div>
+
+    <div id="map-container">
+      <h2>Our Location</h2>
+      <p>Find us here:</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1231.5078155214774!2d29.686978497943226!3d-2.2409156847549685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c33129d1f4a9a3%3A0xf781d00ae8a23457!2sGitwe%20Adventist%20College!5e1!3m2!1sen!2srw!4v1759236603327!5m2!1sen!2srw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="location-blink">📍 Gitwe Hill, Ruhango | PO Box 85, Muhanga, Rwanda</p>
+      <p class="copyright">
+        © <span id="copy-year">2025</span> All rights reserved.
+        <br> Designed and developed by <strong>C.A.G</strong>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+
+  <!-- Firebase Loader -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
+
+    /* ✅ Firebase Config (MATCHES admin-update.js) */
+    const firebaseConfig = {
+      apiKey: "AIzaSyBOJTxkB5AIQcC_Kdoci7aVgUJ8aoqFbfA",
+      authDomain: "gitweadventistcollege-43898.firebaseapp.com",
+      databaseURL: "https://gitweadventistcollege-43898-default-rtdb.firebaseio.com",
+      projectId: "gitweadventistcollege-43898",
+      storageBucket: "gitweadventistcollege-43898.firebasestorage.app",
+      messagingSenderId: "666797850535",
+      appId: "1:666797850535:web:f161deee2c262912668082",
+      measurementId: "G-7C00X575VD"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    const newsList = document.getElementById("newsList");
+    const holidayList = document.getElementById("holidayList");
+
+    // Helper: truncate long text
+    function truncateText(text, limit = 200) {
+      if (text.length <= limit) return { short: text, full: text, truncated: false };
+      return {
+        short: text.substring(0, limit) + "...",
+        full: text,
+        truncated: true
+      };
+    }
+
+    // Render News Card with Read More
+    function createNewsCard(data, id) {
+      const truncated = truncateText(data.paragraph, 200);
+      return `
+        <div class="news-item">
+          <h2>${data.title}</h2>
+          <div class="image-container">
+            ${data.imageUrl ? `<img src="${data.imageUrl}" alt="News Image" class="news-image">` : ""}
+          </div>
+          <div class="text-container">
+            <p class="news-text" id="news-${id}-text" data-full="${encodeURIComponent(truncated.full)}" data-short="${encodeURIComponent(truncated.short)}" data-state="short">
+              ${truncated.truncated ? truncated.short : truncated.full}
+            </p>
+            ${truncated.truncated ? `<button class="read-more-btn" onclick="toggleText('news-${id}')">Read More</button>` : ""}
+            ${data.videoLink ? `<div class="video-container"><iframe width="100%" height="220" src="${data.videoLink.replace("watch?v=", "embed/")}" frameborder="0" allowfullscreen></iframe></div>` : ""}
+          </div>
+        </div>
+      `;
+    }
+
+    // Render Holiday Card
+    function createHolidayCard(data) {
+      return `
+        <div class="holiday-card">
+          <h2>${data.holidayTitle}</h2>
+          <p>${data.holidayParagraph}</p>
+          ${data.holidayDownloadLink ? `<a href="${data.holidayDownloadLink}" target="_blank" class="download-btn">📥 Download Package</a>` : ""}
+        </div>
+      `;
+    }
+
+    // Load News
+    onValue(ref(db, "updates"), (snapshot) => {
+      newsList.innerHTML = "";
+      let counter = 0;
+      snapshot.forEach((child) => {
+        newsList.innerHTML += createNewsCard(child.val(), counter++);
+      });
+    });
+
+    // Load Holidays
+    onValue(ref(db, "holidayPackages"), (snapshot) => {
+      holidayList.innerHTML = "";
+      snapshot.forEach((child) => {
+        holidayList.innerHTML += createHolidayCard(child.val());
+      });
+    });
+
+    // Global function for read more toggle
+    window.toggleText = function (id) {
+      const textEl = document.getElementById(id + "-text");
+      const btn = textEl.parentElement.querySelector(".read-more-btn");
+      const state = textEl.getAttribute("data-state");
+
+      if (state === "short") {
+        textEl.textContent = decodeURIComponent(textEl.getAttribute("data-full"));
+        textEl.setAttribute("data-state", "full");
+        btn.textContent = "Read Less";
+      } else {
+        textEl.textContent = decodeURIComponent(textEl.getAttribute("data-short"));
+        textEl.setAttribute("data-state", "short");
+        btn.textContent = "Read More";
+      }
+    };
+
+    // Holiday toggle button
+    const holidayBtn = document.getElementById("holidayBtn");
+    const holidaySection = document.getElementById("holidaySection");
+    if (holidayBtn && holidaySection) {
+      holidayBtn.addEventListener("click", () => {
+        holidaySection.classList.toggle("active");
+        holidayBtn.textContent = holidaySection.classList.contains("active")
+          ? "❌ Hide Holiday Packages"
+          : "📦 Show Holiday Packages";
+      });
+    }
+
+    // Back to top button
+    const backToTopButton = document.getElementById("back-to-top");
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
+</body>
+</html>

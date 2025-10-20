@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academics</title>
+    <link rel="icon" href="image/log.jpg" type="image/x-icon">
+    <!-- You can also use PNG or JPG -->
+    <!-- <link rel="icon" href="images/your-image-file.png" type="image/png"> -->
+
+    <!-- Swiper CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="load.css">
+    <link rel="stylesheet" href="academics.css">
+</head>
+
+<body>
+
+   <!-- Loading Screen -->
+<div id="loading-screen">
+    <div class="water-drop">
+        <div class="drop"></div>
+        <div class="ripple"></div>
+    </div>
+    <p class="loading-text">Loading...</p>
+    <p class="loading-subtext">Produced by C Codes</p>
+</div>
+
+<!-- Header -->
+  <header id="mainHeader">
+    <div class="logo">
+      <img src="log.jpg" alt="School Logo" />
+      <h1>College Adventiste de Gitwe</h1>
+    </div>
+
+    <!-- Hamburger Toggle -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="academics.html">Academics</a>
+      <div class="dropdown" id="ourSchoolDropdown">
+    <button onclick="toggleDropdown()">Our School</button>
+    <div class="dropdown-content" id="dropdownMenu">
+        <a href="about.html">About Us</a>
+        <a href="alumni.html">Alumni</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+</div>
+      <a href="extracurricular.html">Extracurricular</a>
+      <a href="updates.html">School Updates</a>
+      <a href="apply.html" class="apply-btn">Apply Online</a>
+    </nav>
+  </header>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="ict.jpg" alt="Slide 1" />
+        <div class="slide-text">Creative Students at Work</div>
+      </div>
+      <div class="swiper-slide">
+        <img src="pcb.jpeg" alt="Slide 2" />
+        <div class="slide-text">Learning in Action</div>
+      </div>
+      <div class="swiper-slide">
+        <img src="1.jpeg" alt="Slide 3" />
+        <div class="slide-text">Faculty Projects Showcase</div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Pagination Dots -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+<!-- Intellectual Hub Section -->
+  <section>
+    <div class="intellectual-hub">
+      <div class="hub-content">
+        <div>
+            <div class="hub-text">
+            <h1>A HUB OF INTELLECTUAL CHALLENGE</h1>
+            <p>
+              GSO Butare nurtures a lasting passion for learning among its students. A welcoming atmosphere, top-notch amenities, and dedicated educators offer the framework and encouragement necessary for every student to thrive in this academically stimulating setting, equipping them aptly for higher education and beyond. Our institution shapes the future trailblazers of our nation, empowering them with the aptitudes needed to confront an ever-evolving global landscape, one that defies precise prediction.
+            </p>
+          </div>
+        </div>
+
+        <div class="hub-side">
+          <h3>Academic Levels</h3>
+          <p>🧮 Ordinary Level (O' Level)</p>
+          <p>🔬 Advanced Level (A' Level)</p>
+        </div>
+      </div>
+    </div>
+
+   <h1>COMBINATIONS</h1>
+
+  <div class="combinations">
+    <!-- MCE -->
+    <div class="combo-card mce">
+      <div class="combo-face combo-front"><h2>MCE</h2></div>
+      <div class="combo-face combo-back" style="background-image: url('mec.jpeg');">
+        <h2>MCE</h2>
+        <p>Mathematics, Computer Science, and Economics</p>
+      </div>
+    </div>
+
+    <!-- MPC -->
+    <div class="combo-card mpc">
+      <div class="combo-face combo-front"><h2>MPC</h2></div>
+      <div class="combo-face combo-back" style="background-image: url('mpc.jpeg');">
+        <h2>MPC</h2>
+        <p>Mathematics, Physics, and Computer Science</p>
+      </div>
+    </div>
+
+    <!-- PCB -->
+    <div class="combo-card pcb">
+      <div class="combo-face combo-front"><h2>PCB</h2></div>
+      <div class="combo-face combo-back" style="background-image: url('pcb.jpg');">
+        <h2>PCB</h2>
+        <p>Physics, Chemistry, and Biology</p>
+      </div>
+    </div>
+
+    <!-- MCB -->
+    <div class="combo-card mcb">
+      <div class="combo-face combo-front"><h2>MCB</h2></div>
+      <div class="combo-face combo-back" style="background-image: url('image/study/mcb.jpg');">
+        <h2>MCB</h2>
+        <p>Mathematics, Chemistry, and Biology</p>
+      </div>
+    </div>
+
+    <!-- HGL -->
+    <div class="combo-card hgl">
+      <div class="combo-face combo-front"><h2>HGL</h2></div>
+      <div class="combo-face combo-back" style="background-image: url('image/study/hgl.jpg');">
+        <h2>HGL</h2>
+        <p>History, Geography, and Literature</p>
+      </div>
+    </div>
+
+    <!-- MEG -->
+    <div class="combo-card meg">
+      <div class="combo-face combo-front"><h2>MEG</h2></div>
+      <div class="combo-face combo-back" style="background-image: url('image/study/meg.jpeg');">
+        <h2>MEG</h2>
+        <p>Mathematics, Economics, and Geography</p>
+      </div>
+    </div>
+
+    <!-- ANP -->
+    <div class="combo-card anp">
+      <div class="combo-face combo-front"><h2>ANP</h2></div>
+      <div class="combo-face combo-back" style="background-image: url('image/study/anp.jpg');">
+        <h2>ANP</h2>
+        <p>Anthropology, Nutrition, and Psychology</p>
+      </div>
+    </div>
+
+    <!-- MPG -->
+    <div class="combo-card mpg">
+      <div class="combo-face combo-front"><h2>MPG</h2></div>
+      <div class="combo-face combo-back" style="background-image: url('image/study/mpg.jpg');">
+        <h2>MPG</h2>
+        <p>Mathematics, Physics, and Geography</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="amenities-section">
+    <div class="amenities-content">
+      <h1>OUR AMENITIES</h1>
+      <p class="description">
+        Our School stands among the top for its superior facilities, which significantly enhance the educational experience and add to the enjoyment of our learners.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Computer Labs</h3>
+          <p>Our computer labs promote tech literacy, offering students access to tools for research and creativity, fostering innovation and digital exploration.</p>
+        </div>
+        <div class="card">
+          <h3>Science Labs</h3>
+          <p>Science labs at GSOB facilitate hands-on learning and discovery, empowering students to explore scientific concepts through experimentation.</p>
+        </div>
+        <div class="card">
+          <h3>Library</h3>
+          <p>Library fuels academic excellence, offering students diverse resources for research and study, fostering a culture of learning.</p>
+        </div>
+        <div class="card">
+          <h3>Smart Classes</h3>
+          <p>Our smart classes engage students actively with interactive technology, empowering educators for dynamic teaching.</p>
+        </div>
+        <div class="card">
+          <h3>Clinical Environment</h3>
+          <p>We offer Clinical Environment for Nurses, providing healthcare professionals with diverse tools and knowledge for patient care, cultivating a culture of healing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Back to Top Button -->
+    <button id="back-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+ <!-- Footer -->
+  <footer id="main-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>SINCE 1984</h3>
+        <p><strong>ADVENTIST UNIVERSITY OF CENTRAL AFRICA</strong></p>
+        <p>Masoro Hill, City of Kigali</p>
+        <p>PO Box 2461, Kigali, Rwanda</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>INQUIRIES</h4>
+        <p><strong>Admissions:</strong> admissions@auca.ac.rw<br>📞 +250 724796998</p>
+        <p><strong>Media:</strong> marketing@auca.ac.rw</p>
+        <p><strong>General:</strong> info@auca.ac.rw</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <h4>Follow Us</h4>
+        <p>🌐 Facebook | Twitter | YouTube</p>
+      </div>
+    </div>
+
+    <!-- Map Section before Copyright -->
+    <div id="map-container">
+      <h2>Our Location</h2>
+      <p>Find us here:</p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.768026659082!2d29.685407774087462!3d-2.24057543741189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c33129d1f4a9a3%3A0xf781d00ae8a23457!2sGitwe%20Adventist%20College!5e0!3m2!1sen!2srw!4v1743929804588!5m2!1sen!2srw"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="location-blink">
+        📍 Masoro Hill, City of Kigali | PO Box 2461, Kigali, Rwanda
+      </p>
+      <p class="copyright">
+        © <span id="copy-year">2025</span> All rights reserved.
+        <br>
+        Designed and developed by <strong>M.Emmanuel, N.Emile and K.Donmhall</strong>.
+      </p>
+    </div>
+  </footer>
+
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script src="academics.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
+    </script>
+
+<!-- START dynamic academics content -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
+
+  // ✅ New Firebase config (same as admin-academics.js)
+  const firebaseConfig = {
+    apiKey: "AIzaSyBOJTxkB5AIQcC_Kdoci7aVgUJ8aoqFbfA",
+    authDomain: "gitweadventistcollege-43898.firebaseapp.com",
+    databaseURL: "https://gitweadventistcollege-43898-default-rtdb.firebaseio.com",
+    projectId: "gitweadventistcollege-43898",
+    storageBucket: "gitweadventistcollege-43898.firebasestorage.app",
+    messagingSenderId: "666797850535",
+    appId: "1:666797850535:web:f161deee2c262912668082",
+    measurementId: "G-7C00X575VD"
+  };
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  // Elements
+  const swiperWrapper = document.querySelector('.swiper .swiper-wrapper');
+  const hubTitleEl = document.querySelector('.hub-text h1');
+  const hubParagraphEl = document.querySelector('.hub-text p');
+  const levelsSide = document.querySelector('.hub-side');
+  const combosContainer = document.querySelector('.combinations');
+  const amenitiesCardsContainer = document.querySelector('.amenities-section .cards');
+
+  // 🔹 Slider (from Firebase)
+  onValue(ref(db, 'academics/slider'), snap => {
+    const arr = snap.val() || [];
+    if (!arr.length) return;
+    if (swiperWrapper) {
+      swiperWrapper.innerHTML = '';
+      arr.forEach(s => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.innerHTML = `<img src="${s.url}" alt="${s.caption||''}" />
+          <div class="slide-text">${s.caption||''}</div>`;
+        swiperWrapper.appendChild(slide);
+      });
+      if (window.swiper && typeof window.swiper.update === 'function') {
+        window.swiper.update();
+      }
+    }
+  });
+
+  // 🔹 Levels documents
+  onValue(ref(db, 'academics/levels/docs'), snap => {
+    const arr = snap.val() || [];
+    if (levelsSide) {
+      const existing = levelsSide.querySelector('.dynamic-docs');
+      if (existing) existing.remove();
+      if (arr.length) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'dynamic-docs';
+        arr.forEach(d => {
+          const a = document.createElement('a');
+          a.href = d.url; 
+          a.target = '_blank';
+          a.download = d.filename || d.name;
+          a.textContent = `Download ${d.name}`;
+          const div = document.createElement('div');
+          div.appendChild(a);
+          wrapper.appendChild(div);
+        });
+        levelsSide.appendChild(wrapper);
+      }
+    }
+  });
+
+  // 🔹 Combinations
+  onValue(ref(db, 'academics/combinations'), snap => {
+    const arr = snap.val() || [];
+    if (!combosContainer) return;
+    combosContainer.innerHTML = '';
+    if (!arr.length) {
+      combosContainer.innerHTML = '<p>No combinations configured.</p>';
+      return;
+    }
+    arr.forEach(c => {
+      const card = document.createElement('div');
+      card.className = 'combo-card';
+      card.innerHTML = `
+        <div class="combo-face combo-front"><h2>${escapeHtml(c.code)}</h2></div>
+        <div class="combo-face combo-back" style="background-image:url('${escapeHtml(c.image)}');">
+          <h2>${escapeHtml(c.code)}</h2>
+          <p>${escapeHtml(c.description)}</p>
+        </div>`;
+      combosContainer.appendChild(card);
+    });
+  });
+
+  // 🔹 Hub content
+  onValue(ref(db, 'academics/hub'), snap => {
+    const data = snap.val() || {};
+    if (hubTitleEl && data.title) hubTitleEl.textContent = data.title;
+    if (hubParagraphEl && data.paragraph) hubParagraphEl.textContent = data.paragraph;
+  });
+
+  // 🔹 Amenities
+  onValue(ref(db, 'academics/amenities'), snap => {
+    const arr = snap.val() || [];
+    if (!arr.length || !amenitiesCardsContainer) return;
+    const localCards = Array.from(amenitiesCardsContainer.querySelectorAll('.card'));
+    if (localCards.length === arr.length) {
+      for (let i=0;i<arr.length;i++){
+        const card = localCards[i];
+        const h = card.querySelector('h3');
+        const p = card.querySelector('p');
+        if (h) h.textContent = arr[i].title;
+        if (p) p.textContent = arr[i].description;
+      }
+    } else {
+      amenitiesCardsContainer.innerHTML = '';
+      arr.forEach(a => {
+        const node = document.createElement('div');
+        node.className = 'card';
+        node.innerHTML = `<h3>${escapeHtml(a.title)}</h3><p>${escapeHtml(a.description)}</p>`;
+        amenitiesCardsContainer.appendChild(node);
+      });
+    }
+  });
+
+  // Helper to escape HTML
+  function escapeHtml(text){ 
+    if (!text) return ''; 
+    return String(text)
+      .replaceAll('&','&amp;')
+      .replaceAll('<','&lt;')
+      .replaceAll('>','&gt;');
+  }
+</script>
+<!-- END dynamic academics content -->
+
+
+  <!-- END dynamic academics content -->
+  
+</body>
+
+</html>

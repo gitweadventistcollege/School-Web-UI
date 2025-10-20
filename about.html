@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Our School</title>
+    <link rel="icon" href="image/log.jpg" type="image/x-icon">
+    <!-- You can also use PNG or JPG -->
+    <!-- <link rel="icon" href="images/your-image-file.png" type="image/png"> -->
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="load.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="water-drop">
+            <div class="drop"></div>
+            <div class="ripple"></div>
+        </div>
+        <p class="loading-text">Loading...</p>
+        <p class="loading-subtext">Produced by C Codes</p>
+    </div>
+
+    <!-- Header -->
+    <header id="mainHeader">
+        <div class="logo">
+            <img src="log.jpg" alt="School Logo" />
+            <h1>College Adventiste de Gitwe</h1>
+        </div>
+
+        <!-- Hamburger Toggle -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="academics.html">Academics</a>
+            <div class="dropdown" id="ourSchoolDropdown">
+                <button onclick="toggleDropdown()">Our School</button>
+                <div class="dropdown-content" id="dropdownMenu">
+                    <a href="about.html">About Us</a>
+                    <a href="alumni.html">Alumni</a>
+                    <a href="gallery.html">Gallery</a>
+                </div>
+            </div>
+            <a href="extracurricular.html">Extracurricular</a>
+            <a href="updates.html">School Updates</a>
+            <a href="apply.html" class="apply-btn">Apply Online</a>
+        </nav>
+    </header>
+
+<!-- SECTION WITH BACKGROUND IMAGE + ANIMATIONS -->
+  <section class="image-only-section">
+    <div class="image-content">
+      <h1>Welcome to CAG About Us</h1>
+      <p>Where excellence lives on. Celebrating the legacy, unity, and greatness of our community.</p>
+    </div>
+  </section>
+
+  <!-- Our School History Section -->
+<section class="history-section">
+  <div class="section-container">
+    <h2 class="section-title">Our School History</h2>
+    <p class="history-text">
+      The College Adventist de Gitwe (CAG), also known as CAG, is a historic secondary school in Huye District in Ruhango (formerly Astrida), Rwanda. As well as being the oldest secondary school in the country, it is regarded as one of the most prestigious and successful public schools in Rwanda. 
+      <br><br>
+      The school, originally known as the College Adventist,. 
+      <br><br>
+      It took students, often the children of chiefs and other dignitaries,i. Between 1932 and 1957, the Groupe Scolaire d'Astrida admitted 964 students from Rwanda. After independence, the school was renamed the Groupe Scolaire de Butare. This school is regarded as one of the most selective schools in Rwanda.
+    </p>
+  </div>
+</section>
+
+<!-- What Shapes Our Futures Section -->
+  <section class="shapes-section">
+    <h2 class="shapes-title">What Shapes Our Futures</h2>
+    <div class="shape-container">
+
+      <!-- Mission -->
+      <div class="shape-card mission">
+        <h3>Our Mission</h3>
+        <p>
+          The mission of GSO Butare is to provide learners with quality education and commitment to bring positive changes towards sustainable development of our country.
+        </p>
+      </div>
+
+      <!-- Vision -->
+      <div class="shape-card vision">
+        <h3>Our Vision</h3>
+        <p>
+          GSO Butare strives to be always a school of excellence that provides moral, social, scientific, and holistic education by promoting individual competencies and skills.
+        </p>
+      </div>
+
+      <!-- Values -->
+      <div class="shape-card values">
+        <h3>Our Values</h3>
+        <p>
+          GSO Butare values academic excellence, integrity, inclusivity, innovation, and community engagement, fostering a nurturing environment for holistic development.
+        </p>
+      </div>
+
+      <!-- Goals -->
+      <div class="shape-card goals">
+        <h3>Our Goals</h3>
+        <p>
+          GSO Butare aims to empower students through a comprehensive education that emphasizes critical thinking, leadership skills, cultural awareness, and social responsibility.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>SINCE 1984</h3>
+                <p><strong>ADVENTIST UNIVERSITY OF CENTRAL AFRICA</strong></p>
+                <p>Masoro Hill, City of Kigali</p>
+                <p>PO Box 2461, Kigali, Rwanda</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>INQUIRIES</h4>
+                <p><strong>Admissions:</strong> admissions@auca.ac.rw<br>📞 +250 724796998</p>
+                <p><strong>Media:</strong> marketing@auca.ac.rw</p>
+                <p><strong>General:</strong> info@auca.ac.rw</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <h4>Follow Us</h4>
+                <p>🌐 Facebook | Twitter | YouTube</p>
+            </div>
+        </div>
+
+        <!-- Map Section before Copyright -->
+        <div id="map-container">
+            <h2>Our Location</h2>
+            <p>Find us here:</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.768026659082!2d29.685407774087462!3d-2.24057543741189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c33129d1f4a9a3%3A0xf781d00ae8a23457!2sGitwe%20Adventist%20College!5e0!3m2!1sen!2srw!4v1743929804588!5m2!1sen!2srw"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="location-blink">
+                📍 Masoro Hill, City of Kigali | PO Box 2461, Kigali, Rwanda
+            </p>
+            <p class="copyright">
+                © <span id="copy-year">2025</span> All rights reserved.
+                <br>
+                Designed and developed by <strong>M.Emmanuel, N.Emile and K.Donmhall</strong>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+        // Scroll back to the top when the button is clicked
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+    </script>
+ <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
+
+  // Use the SAME Firebase project as admin-about.js
+  const firebaseConfig = {
+    apiKey: "AIzaSyBOJTxkB5AIQcC_Kdoci7aVgUJ8aoqFbfA",
+    authDomain: "gitweadventistcollege-43898.firebaseapp.com",
+    databaseURL: "https://gitweadventistcollege-43898-default-rtdb.firebaseio.com",
+    projectId: "gitweadventistcollege-43898",
+    storageBucket: "gitweadventistcollege-43898.firebasestorage.app",
+    messagingSenderId: "666797850535",
+    appId: "1:666797850535:web:f161deee2c262912668082",
+    measurementId: "G-7C00X575VD"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  // Elements
+  const historyTextEl = document.querySelector(".history-text");
+  const missionEl = document.querySelector(".shape-card.mission p");
+  const visionEl = document.querySelector(".shape-card.vision p");
+  const valuesEl = document.querySelector(".shape-card.values p");
+  const goalsEl = document.querySelector(".shape-card.goals p");
+
+  // Load history text
+  onValue(ref(db, "about/history/text"), (snap) => {
+    const text = snap.val();
+    if (text && historyTextEl) historyTextEl.innerHTML = text.replace(/\n/g, "<br>");
+  });
+
+  // Load mission/vision/values/goals
+  onValue(ref(db, "about/shapes"), (snap) => {
+    const data = snap.val();
+    if (!data) return;
+    if (data.mission && missionEl) missionEl.textContent = data.mission;
+    if (data.vision && visionEl) visionEl.textContent = data.vision;
+    if (data.values && valuesEl) valuesEl.textContent = data.values;
+    if (data.goals && goalsEl) goalsEl.textContent = data.goals;
+  });
+</script>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alumni School</title>
+  <link rel="icon" href="image/log.jpg" type="image/x-icon">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="load.css">
+  <link rel="stylesheet" href="alumni.css">
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="water-drop">
+      <div class="drop"></div>
+      <div class="ripple"></div>
+    </div>
+    <p class="loading-text">Loading...</p>
+    <p class="loading-subtext">Produced by C Codes</p>
+  </div>
+
+  <!-- Header -->
+  <header id="mainHeader">
+    <div class="logo">
+      <img src="image/log.jpg" alt="School Logo" />
+      <h1>College Adventiste de Gitwe</h1>
+    </div>
+
+    <!-- Hamburger Toggle -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="academics.html">Academics</a>
+      <div class="dropdown" id="ourSchoolDropdown">
+        <button onclick="toggleDropdown()">Our School</button>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="about.html">About Us</a>
+          <a href="alumni.html" class="active">Alumni</a>
+          <a href="gallery.html">Gallery</a>
+        </div>
+      </div>
+      <a href="extracurricular.html">Extracurricular</a>
+      <a href="updates.html">School Updates</a>
+      <a href="apply.html" class="apply-btn">Apply Online</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="heroSection">
+    <h1 id="heroTitle">Welcome to GSO Butare Alumni</h1>
+  </section>
+
+  <!-- Welcome Section -->
+  <div class="welcome-section-two-column">
+    <div class="welcome-text">
+      <h2 id="alumniWelcomeTitle">What about CAG alumni?</h2>
+      <p id="alumniWelcomeContent">
+        Welcome to our official Alumni where memories flourish, connections endure, and futures unite...
+      </p>
+
+      <div class="quote">
+        <div class="quote-left">
+          <img id="alumniQuoteImage" src="image/scl/7.jpg" alt="GSOB Excellence" class="quote-img" />
+        </div>
+        <div class="quote-right">
+          <strong>At CAG, excellence isn't just a goal—it's a tradition.</strong>
+          <p>
+            For decades, our institution has been a cradle of knowledge, a forge of character, and a launchpad for dreams...
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alumni Section -->
+  <div class="section-title">Alumni in Part of Politicians</div>
+  <div class="alumni-grid" id="politicianAlumniGrid">
+    <!-- Dynamic Alumni Cards will load here -->
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>SINCE 1931</h3>
+        <p><strong>COLLEGE ADVENTISTE de GITWE</strong></p>
+        <p>Gitwe Hill, Ruhango</p>
+        <p>PO Box 85, Muhanga, Rwanda</p>
+      </div>
+      <div class="footer-column">
+        <h4>INQUIRIES</h4>
+        <p><strong>Admissions:</strong> admissions@auca.ac.rw<br>📞 +250 7800000000</p>
+        <p><strong>Media:</strong> gitweadventistcollege@gmail.com</p>
+        <p><strong>General:</strong> info@gitwe.ac.rw</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <h4>Follow Us</h4>
+        <p>🌐 Facebook | Twitter | YouTube</p>
+      </div>
+    </div>
+
+    <div id="map-container">
+      <h2>Our Location</h2>
+      <p>Find us here:</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1231.5078155214774!2d29.686978497943226!3d-2.2409156847549685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c33129d1f4a9a3%3A0xf781d00ae8a23457!2sGitwe%20Adventist%20College!5e1!3m2!1sen!2srw!4v1759236603327!5m2!1sen!2srw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="location-blink">📍 Gitwe Hill, Ruhango | PO Box 85, Muhanga, Rwanda</p>
+      <p class="copyright">
+        © <span id="copy-year">2025</span> All rights reserved.
+        <br> Designed and developed by <strong>C.A.G</strong>.
+      </p>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
+
+  <!-- Firebase Loader -->
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
+
+  // ✅ Same Firebase config used in admin-alumni.js
+  const firebaseConfig = {
+    apiKey: "AIzaSyBOJTxkB5AIQcC_Kdoci7aVgUJ8aoqFbfA",
+    authDomain: "gitweadventistcollege-43898.firebaseapp.com",
+    databaseURL: "https://gitweadventistcollege-43898-default-rtdb.firebaseio.com",
+    projectId: "gitweadventistcollege-43898",
+    storageBucket: "gitweadventistcollege-43898.firebasestorage.app",
+    messagingSenderId: "666797850535",
+    appId: "1:666797850535:web:f161deee2c262912668082",
+    measurementId: "G-7C00X575VD"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  // --- Elements ---
+  const heroSection = document.getElementById("alumniHero");
+  const heroTitleEl = document.getElementById("heroTitle");
+  const introHeaderEl = document.getElementById("introHeader");
+  const introParagraphEl = document.getElementById("introParagraph");
+  const introImageEl = document.getElementById("introImage");
+  const alumniGrid = document.querySelector(".alumni-grid");
+
+  // --- Load Hero Section ---
+  onValue(ref(db, "alumniHero"), (snap) => {
+    const data = snap.val();
+    if (data) {
+      if (heroTitleEl) heroTitleEl.textContent = data.heroTitle || "Our Alumni";
+      if (heroSection && data.imageUrl) {
+        heroSection.style.backgroundImage = `url('${data.imageUrl}')`;
+        heroSection.style.backgroundSize = "cover";
+        heroSection.style.backgroundPosition = "center";
+      }
+    }
+  });
+
+  // --- Load Intro Section ---
+  onValue(ref(db, "alumniIntro"), (snap) => {
+    const data = snap.val();
+    if (data) {
+      if (introHeaderEl) introHeaderEl.textContent = data.introHeader || "";
+      if (introParagraphEl) introParagraphEl.textContent = data.introParagraph || "";
+      if (introImageEl && data.imageUrl) {
+        introImageEl.src = data.imageUrl;
+      }
+    }
+  });
+
+  // --- Load Alumni Cards ---
+  onValue(ref(db, "alumni"), (snapshot) => {
+    if (!alumniGrid) return;
+    alumniGrid.innerHTML = "";
+    snapshot.forEach((child) => {
+      const item = child.val();
+      const card = document.createElement("div");
+      card.classList.add("alumni-card");
+
+      card.innerHTML = `
+        ${item.imageUrl ? `<img src="${item.imageUrl}" alt="${item.alumniName}">` : ""}
+        <div class="alumni-card-content">
+          <h3>${item.alumniName || "Unnamed"}</h3>
+          <p><strong>${item.alumniRole || ""}</strong></p>
+          <p>${item.alumniYears || ""}</p>
+          <p>${item.alumniBio || ""}</p>
+          <small>${item.alumniCategory ? "Category: " + item.alumniCategory : ""}</small>
+        </div>
+      `;
+      alumniGrid.appendChild(card);
+    });
+  });
+</script>
+
+</body>
+</html>

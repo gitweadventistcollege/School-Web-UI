@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Adventiste de Gitwe</title>
+  <link rel="icon" href="image/log.jpg" type="image/x-icon">
+  <meta name="google-site-verification" content="Yeek5MrGtxEYosq7k1LPL-o-GcgYJQ2Eymunz-q-a7k" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="load.css">
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="water-drop">
+      <div class="drop"></div>
+      <div class="ripple"></div>
+    </div>
+    <p class="loading-text">Loading...</p>
+    <p class="loading-subtext">WELCOME TO GITWE</p>
+  </div>
+
+  <!-- Header -->
+  <header id="mainHeader">
+    <div class="logo">
+      <img src="image/log.jpg" alt="School Logo" />
+      <h1>College Adventiste de Gitwe</h1>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="academics.html">Academics</a>
+      <div class="dropdown" id="ourSchoolDropdown">
+        <button onclick="toggleDropdown()">Our School</button>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="about.html">About Us</a>
+          <a href="alumni.html">Alumni</a>
+          <a href="gallery.html">Gallery</a>
+        </div>
+      </div>
+      <a href="extracurricular.html">Extracurricular</a>
+      <a href="updates.html">School Updates</a>
+      <a href="#contact">Contacts</a>
+      <a href="apply.html" class="apply-btn">Apply Online</a>
+    </nav>
+  </header>
+
+  <!-- Swiper (Dynamic) -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper" id="swiperWrapper"></div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Compact Counter Section -->
+  <section class="mini-counter-section">
+    <div class="mini-counter-container">
+      <div class="mini-counter-box">
+        <h3 id="allStudents">0</h3>
+        <p>All Students</p>
+      </div>
+      <div class="mini-counter-box">
+        <h3 id="totalStaff">0</h3>
+        <p>Total Staff</p>
+      </div>
+      <div class="mini-counter-box">
+        <h3 id="classSize">0</h3>
+        <p>Mean Class Size</p>
+      </div>
+      <div class="mini-counter-box">
+        <h3 id="legacy">0</h3>
+        <p>Legacy in Time</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principal Section -->
+  <section class="leader-section" data-aos="fade-up">
+    <h2 class="leader-title">Meet Our Principal</h2>
+    <div id="principalContainer"></div>
+  </section>
+
+  <!-- Leadership Grid Section -->
+  <section class="leaders-grid-section" data-aos="fade-up">
+    <h2>Our School Leadership</h2>
+    <div class="leaders-grid" id="leadersGrid"></div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" style="background-color: #f8f9fa; color: #333; padding: 50px 20px;">
+    <h2 style="text-align: center; margin-bottom: 30px; font-size: 2rem;">Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question">📘 What programs does the school offer?</button>
+        <div class="faq-answer">
+          <p>We offer a strong curriculum in sciences, humanities, and technology, grounded in Christian values.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">⏰ What time does school start and end?</button>
+        <div class="faq-answer">
+          <p>Classes usually start at 7:30 AM and end at 4:30 PM, Monday through Friday.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">🏠 Is boarding available for students?</button>
+        <div class="faq-answer">
+          <p>Yes, we have secure and comfortable dormitories for both boys and girls.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">💒 Is this a Christian school?</button>
+        <div class="faq-answer">
+          <p>Yes, College Adventiste de Gitwe is rooted in Adventist values and focuses on spiritual growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Main Sections -->
+  <section class="main-section" id="mainSections"></section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>We would love to hear from you! Please fill out the form below and we will get back to you as soon as possible.</p>
+    <form class="contact-form" id="contactForm" novalidate>
+      <div>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <div class="error-message" id="nameError" style="color: red; display: none;">Please enter your name.</div>
+      </div>
+      <div>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <div class="error-message" id="emailError" style="color: red; display: none;">Please enter a valid email address.</div>
+      </div>
+      <div>
+        <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+        <div class="error-message" id="messageError" style="color: red; display: none;">Please enter your message.</div>
+      </div>
+      <div>
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>SINCE 1931</h3>
+        <p><strong>COLLEGE ADVENTISTE de GITWE</strong></p>
+        <p>Gitwe Hill, Ruhango</p>
+        <p>PO Box 85, Muhanga, Rwanda</p>
+      </div>
+      <div class="footer-column">
+        <h4>INQUIRIES</h4>
+        <p><strong>Admissions:</strong> admissions@auca.ac.rw<br>📞 +250 7800000000</p>
+        <p><strong>Media:</strong> gitweadventistcollege@gmail.com</p>
+        <p><strong>General:</strong> info@gitwe.ac.rw</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <h4>Follow Us</h4>
+        <p>🌐 Facebook | Twitter | YouTube</p>
+      </div>
+    </div>
+
+    <div id="map-container">
+      <h2>Our Location</h2>
+      <p>Find us here:</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1231.5078155214774!2d29.686978497943226!3d-2.2409156847549685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c33129d1f4a9a3%3A0xf781d00ae8a23457!2sGitwe%20Adventist%20College!5e1!3m2!1sen!2srw!4v1759236603327!5m2!1sen!2srw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="location-blink">📍 Gitwe Hill, Ruhango | PO Box 85, Muhanga, Rwanda</p>
+      <p class="copyright">
+        © <span id="copy-year">2025</span> All rights reserved.
+        <br> Designed and developed by <strong>C.A.G</strong>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+
+  <!-- Firebase Loader -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBOJTxkB5AIQcC_Kdoci7aVgUJ8aoqFbfA",
+      authDomain: "gitweadventistcollege-43898.firebaseapp.com",
+      databaseURL: "https://gitweadventistcollege-43898-default-rtdb.firebaseio.com",
+      projectId: "gitweadventistcollege-43898",
+      storageBucket: "gitweadventistcollege-43898.firebasestorage.app",
+      messagingSenderId: "666797850535",
+      appId: "1:666797850535:web:f161deee2c262912668082",
+      measurementId: "G-7C00X575VD"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+
+    // Slides
+    const swiperWrapper = document.getElementById("swiperWrapper");
+    let swiper;
+    onValue(ref(db, "slides"), snap => {
+      swiperWrapper.innerHTML = "";
+      snap.forEach(child => {
+        const s = child.val();
+        const div = document.createElement("div");
+        div.className = "swiper-slide";
+        div.style.backgroundImage = `url('${s.image}')`;
+        swiperWrapper.appendChild(div);
+      });
+      if (swiper) swiper.destroy();
+      swiper = new Swiper(".mySwiper", {
+        loop: true,
+        effect: "fade",
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        speed: 800,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        on: {
+          slideChangeTransitionStart: () => { resetTyping(); setTimeout(startTyping, 400); }
+        }
+      });
+      resetTyping(); startTyping();
+    });
+
+    // Counters
+    onValue(ref(db, "counters"), snap => {
+      const c = snap.val() || {};
+      document.getElementById("allStudents").textContent = c.allStudents ?? 0;
+      document.getElementById("totalStaff").textContent = c.totalStaff ?? 0;
+      document.getElementById("classSize").textContent = c.classSize ?? 0;
+      document.getElementById("legacy").textContent = c.legacy ?? 0;
+    });
+
+    // Principal
+    const principalContainer = document.getElementById("principalContainer");
+    onValue(ref(db, "principal"), snap => {
+      principalContainer.innerHTML = "";
+      if (!snap.exists()) return;
+      const p = snap.val();
+      principalContainer.innerHTML = `
+        <div class="principal-card">
+          <div class="principal-image"><img src="${p.image}"/></div>
+          <div class="principal-message">
+            <h3>${p.name}</h3>
+            <p class="role">${p.role}</p>
+            <p class="message">${p.message}</p>
+            <div class="social-links">
+              <a href="${p.facebook}" target="_blank">Facebook</a><br>
+              <a href="${p.instagram}" target="_blank">Instagram</a><br>
+              <a href="https://wa.me/${p.whatsapp}" target="_blank">WhatsApp</a>
+            </div>
+          </div>
+        </div>`;
+    });
+
+    // Leaders
+    const leadersGrid = document.getElementById("leadersGrid");
+    onValue(ref(db, "leaders"), snap => {
+      leadersGrid.innerHTML = "";
+      snap.forEach(child => {
+        const l = child.val();
+        leadersGrid.innerHTML += `
+          <div class="leader-card">
+            <img src="${l.image}"/>
+            <h3>${l.name}</h3>
+            <p>${l.role}</p>
+            <div class="social-links">
+              <a href="${l.facebook}" target="_blank">Facebook</a><br>
+              <a href="${l.instagram}" target="_blank">Instagram</a><br>
+              <a href="https://wa.me/${l.whatsapp}" target="_blank">WhatsApp</a>
+            </div>
+          </div>`;
+      });
+    });
+
+    // Sections
+    const mainSections = document.getElementById("mainSections");
+    onValue(ref(db, "sections"), snap => {
+      mainSections.innerHTML = "";
+      snap.forEach(child => {
+        const s = child.val();
+        mainSections.innerHTML += `
+          <div class="section-box">
+            <h2>${s.title}</h2>
+            <p>${s.text}</p>
+            <div class="image-box"><img src="${s.image}"/></div>
+          </div>`;
+      });
+    });
+
+    // Typing Effect
+    function resetTyping() {
+      document.querySelectorAll(".typing").forEach(el => el.textContent = "");
+    }
+    function startTyping() {
+      const activeSlide = document.querySelector(".swiper-slide-active");
+      if (!activeSlide) return;
+      const typingElements = activeSlide.querySelectorAll(".typing");
+      typingElements.forEach((el, index) => {
+        const text = el.getAttribute("data-text");
+        let i = 0;
+        setTimeout(() => {
+          const interval = setInterval(() => {
+            if (i < text.length) { el.textContent += text[i]; i++; }
+            else clearInterval(interval);
+          }, 40);
+        }, 50 + index * 100);
+      });
+    }
+  </script>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // ✅ Initialize EmailJS (use your PUBLIC KEY here)
+  emailjs.init({
+    publicKey: "Oy8vTNqgd0aE8O4NeeRHx" // if this is public key, else replace with actual public key
+  });
+
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // Basic validation
+    if (!name) {
+      document.getElementById("nameError").style.display = "block";
+      return;
+    } else {
+      document.getElementById("nameError").style.display = "none";
+    }
+
+    if (!email) {
+      document.getElementById("emailError").style.display = "block";
+      return;
+    } else {
+      document.getElementById("emailError").style.display = "none";
+    }
+
+    if (!message) {
+      document.getElementById("messageError").style.display = "block";
+      return;
+    } else {
+      document.getElementById("messageError").style.display = "none";
+    }
+
+    // ✅ Send email via EmailJS
+    emailjs.send("service_zuoesf9", "template_xufxqas", {
+      from_name: name,
+      from_email: email,
+      message: message
+    }).then(
+      function(response) {
+        console.log("SUCCESS!", response.status, response.text);
+        showToast("Message sent successfully! ✅", "success");
+        form.reset();
+      },
+      function(error) {
+        console.error("FAILED...", error);
+        showToast("Failed to send message ❌", "error");
+      }
+    );
+  });
+
+  // Toast notification helper
+  function showToast(message, type="success") {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.className = `toast ${type} show`;
+    setTimeout(() => toast.className = "toast", 3000);
+  }
+</script>
+
+</body>
+</html>

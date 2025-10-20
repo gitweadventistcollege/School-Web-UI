@@ -1,0 +1,246 @@
+/* ================== GLOBAL CONTAINERS ================== */
+.container,
+.movement-container,
+.clubs-container {
+    max-width: 100%;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* ================== TYPING ANIMATION FOR TITLES ================== */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+.page-title h1,
+.movement-header h1,
+.clubs-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #007BFF; /* cursor */
+    width: 0;
+    display: inline-block;
+    animation: typing 3s steps(25, end) forwards,
+               blink 0.7s step-end infinite;
+}
+
+.page-title h1 { animation-delay: 0.5s; }
+.movement-header h1 { animation-delay: 1s; }
+.clubs-header h1 { animation-delay: 1.5s; }
+
+.page-title p,
+.movement-header p,
+.clubs-header p {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeDown 1s ease forwards;
+    animation-delay: 2s;
+}
+
+/* ================== SPORTS SECTION ================== */
+.sports-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.sport-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+}
+.sport-item:nth-child(1) { animation-delay: 0.3s; }
+.sport-item:nth-child(2) { animation-delay: 0.5s; }
+.sport-item:nth-child(3) { animation-delay: 0.7s; }
+
+.text-container {
+    order: 1;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeDown 1s ease forwards;
+}
+.text-container h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+.sport-description {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.sport-image {
+    order: 2;
+    width: 80%;
+    max-width: 320px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    animation: floating 6s ease-in-out infinite;
+}
+.sport-image:hover { transform: scale(1.08); }
+
+/* ================== MOVEMENTS SECTION ================== */
+.movement-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.movement-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+}
+.movement-img {
+    order: 2;
+    width: 80%;
+    border-radius: 8px;
+    margin-top: 12px;
+    animation: floating 7s ease-in-out infinite, glow 4s infinite;
+}
+.movement-info {
+    order: 1;
+    opacity: 0;
+    animation: fadeDown 1s ease forwards;
+}
+.movement-info h2 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* ================== CLUBS SECTION ================== */
+.clubs-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+.club-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeUp 1s ease forwards;
+}
+.club-card:hover {
+    transform: scale(1.08) rotate(-1deg);
+    box-shadow: 0 8px 20px rgba(0, 153, 255, 0.3);
+}
+.club-card h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeDown 1s ease forwards;
+}
+
+/* ================== SWIPER SLIDER ================== */
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 1.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* ================== BACK TO TOP BUTTON ================== */
+#back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding: 12px 16px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #007BFF, #00C9A7);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+#back-to-top:hover {
+    transform: scale(1.15) rotate(8deg);
+    background: linear-gradient(135deg, #0056b3, #009688);
+}
+
+/* ================== ANIMATIONS ================== */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(0, 153, 255, 0.2); }
+    50% { box-shadow: 0 0 25px rgba(0, 153, 255, 0.4); }
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 1024px) {
+    .movement-list { grid-template-columns: repeat(3, 1fr); }
+    .clubs-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .sports-section { grid-template-columns: 1fr; }
+    .movement-list { grid-template-columns: 1fr; }
+    .clubs-list { grid-template-columns: 1fr; }
+    .swiper-container { height: 70vh; }
+}
+@media (max-width: 480px) {
+    .swiper-container { height: 50vh; }
+    .page-title h1,
+    .movement-header h1,
+    .clubs-header h1 { font-size: 1.5em; }
+    .sport-description,
+    .movement-info p,
+    .club-card h3 { font-size: 0.9em; }
+}
